@@ -6,7 +6,13 @@ import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;
 
-public interface TransformerStreams extends Processor {
+
+public interface TransformerStreams{
+  
+}
+
+    /*
+    extends Processor {
   String INPUT = "transformer-in";
   String OUTPUT = "transformer-out";
 
@@ -16,3 +22,5 @@ public interface TransformerStreams extends Processor {
   @Output(OUTPUT)
   MessageChannel outboundGreetings();
 }
+
+     */

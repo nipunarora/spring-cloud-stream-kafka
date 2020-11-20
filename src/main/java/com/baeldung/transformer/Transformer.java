@@ -8,12 +8,12 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Processor;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class Transformer {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(Transformer.class);
 
-  @StreamListener(TransformerStreams.INPUT)
+  //@StreamListener(TransformerStreams.INPUT)
   public void transform(Employee employeeDetails) {
     LOGGER.info("Let's process employee details: {}", employeeDetails);
   }

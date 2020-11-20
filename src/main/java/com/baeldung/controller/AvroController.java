@@ -15,7 +15,7 @@ public class AvroController {
 
     @PostMapping("/employees/{id}/{firstName}/{lastName}")
     public String producerAvroMessage(@PathVariable int id, @PathVariable String firstName, @PathVariable String lastName) {
-        avroProducer.produceEmployeeDetails(id, firstName, lastName);
+        avroProducer.produce();
         return "Sent employee details to consumer";
     }
 

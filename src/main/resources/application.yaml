@@ -19,14 +19,16 @@ spring:
          producer: 
           useNativeEncoding: true
          consumer:  
-          useNativeEncoding: true     
+          useNativeEncoding: true
+      function:
+        definition: receive;produce
       bindings:
-        input:
+        receive-in-0:
           destination: employee-details
           content-type: application/*+avro
           group: group-1
           concurrency: 3
-        output:
+        produce-out-0:
           destination: employee-details
           content-type: application/*+avro
       kafka:
