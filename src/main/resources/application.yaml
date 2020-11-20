@@ -1,0 +1,44 @@
+spring:
+  kafka:
+    properties:
+      sasl:
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username="pl_flybookeng" password="qzr1l6wyevkl5lvy";
+        mechanism: PLAIN
+      security:
+        protocol: SASL_SSL
+      #Server host name verification is disabled by setting ssl.endpoint.identification.algorithm to an empty string
+      ssl.endpoint.identification.algorithm:
+      ssl:
+        protocol: SSL
+        truststore.location: /Users/narora/Downloads/pcln_cacerts
+        truststore.password: changeit
+  cloud:
+    stream:
+      default: 
+         producer: 
+          useNativeEncoding: true
+         consumer:  
+          useNativeEncoding: true     
+      bindings:
+        input:
+          destination: employee-details
+          content-type: application/*+avro
+          group: group-1
+          concurrency: 3
+        output:
+          destination: employee-details
+          content-type: application/*+avro
+      kafka:
+          binder:
+            brokers:
+              guse4-kafkadefault-dev-pcln-pl-aivenio-dev.aivencloud.com:17485
+            producer-properties:
+              key.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+              value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+              schema.registry.url: http://localhost:8081
+            consumer-properties:
+              key.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+              value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+              schema.registry.url: http://localhost:8081
+              specific.avro.reader: true
