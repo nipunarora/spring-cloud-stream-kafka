@@ -1,4 +1,4 @@
-package com.baeldung.config;
+package com.nipun.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.stream.schema.client.ConfluentSchemaRegistryClient;

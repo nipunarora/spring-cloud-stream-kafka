@@ -3,9 +3,8 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.baeldung.schema;
+package com.nipun.schema;
 
-import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -15,7 +14,7 @@ import org.apache.avro.message.SchemaStore;
 @org.apache.avro.specific.AvroGenerated
 public class Employee extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
   private static final long serialVersionUID = 7340575283344282036L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Employee\",\"namespace\":\"com.baeldung.schema\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"firstName\",\"type\":\"string\"},{\"name\":\"lastName\",\"type\":\"string\"},{\"name\":\"department\",\"type\":\"string\",\"default\":\"IT \"},{\"name\":\"designation\",\"type\":\"string\",\"default\":\"Software Engineer\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Employee\",\"namespace\":\"com.nipun.schema\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"firstName\",\"type\":\"string\"},{\"name\":\"lastName\",\"type\":\"string\"},{\"name\":\"department\",\"type\":\"string\",\"default\":\"IT \"},{\"name\":\"designation\",\"type\":\"string\",\"default\":\"Software Engineer\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -216,8 +215,8 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
    * Creates a new Employee RecordBuilder.
    * @return A new Employee RecordBuilder
    */
-  public static com.baeldung.schema.Employee.Builder newBuilder() {
-    return new com.baeldung.schema.Employee.Builder();
+  public static com.nipun.schema.Employee.Builder newBuilder() {
+    return new com.nipun.schema.Employee.Builder();
   }
 
   /**
@@ -225,11 +224,11 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
    * @param other The existing builder to copy.
    * @return A new Employee RecordBuilder
    */
-  public static com.baeldung.schema.Employee.Builder newBuilder(com.baeldung.schema.Employee.Builder other) {
+  public static com.nipun.schema.Employee.Builder newBuilder(com.nipun.schema.Employee.Builder other) {
     if (other == null) {
-      return new com.baeldung.schema.Employee.Builder();
+      return new com.nipun.schema.Employee.Builder();
     } else {
-      return new com.baeldung.schema.Employee.Builder(other);
+      return new com.nipun.schema.Employee.Builder(other);
     }
   }
 
@@ -238,11 +237,11 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
    * @param other The existing instance to copy.
    * @return A new Employee RecordBuilder
    */
-  public static com.baeldung.schema.Employee.Builder newBuilder(com.baeldung.schema.Employee other) {
+  public static com.nipun.schema.Employee.Builder newBuilder(com.nipun.schema.Employee other) {
     if (other == null) {
-      return new com.baeldung.schema.Employee.Builder();
+      return new com.nipun.schema.Employee.Builder();
     } else {
-      return new com.baeldung.schema.Employee.Builder(other);
+      return new com.nipun.schema.Employee.Builder(other);
     }
   }
 
@@ -268,7 +267,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.baeldung.schema.Employee.Builder other) {
+    private Builder(com.nipun.schema.Employee.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -296,7 +295,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
      * Creates a Builder by copying an existing Employee instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.baeldung.schema.Employee other) {
+    private Builder(com.nipun.schema.Employee other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -334,7 +333,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder setId(int value) {
+    public com.nipun.schema.Employee.Builder setId(int value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -354,7 +353,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder clearId() {
+    public com.nipun.schema.Employee.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -373,7 +372,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'firstName'.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder setFirstName(java.lang.CharSequence value) {
+    public com.nipun.schema.Employee.Builder setFirstName(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.firstName = value;
       fieldSetFlags()[1] = true;
@@ -393,7 +392,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'firstName' field.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder clearFirstName() {
+    public com.nipun.schema.Employee.Builder clearFirstName() {
       firstName = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -413,7 +412,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'lastName'.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder setLastName(java.lang.CharSequence value) {
+    public com.nipun.schema.Employee.Builder setLastName(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.lastName = value;
       fieldSetFlags()[2] = true;
@@ -433,7 +432,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'lastName' field.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder clearLastName() {
+    public com.nipun.schema.Employee.Builder clearLastName() {
       lastName = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -453,7 +452,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'department'.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder setDepartment(java.lang.CharSequence value) {
+    public com.nipun.schema.Employee.Builder setDepartment(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.department = value;
       fieldSetFlags()[3] = true;
@@ -473,7 +472,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'department' field.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder clearDepartment() {
+    public com.nipun.schema.Employee.Builder clearDepartment() {
       department = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -493,7 +492,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'designation'.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder setDesignation(java.lang.CharSequence value) {
+    public com.nipun.schema.Employee.Builder setDesignation(java.lang.CharSequence value) {
       validate(fields()[4], value);
       this.designation = value;
       fieldSetFlags()[4] = true;
@@ -513,7 +512,7 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'designation' field.
       * @return This builder.
       */
-    public com.baeldung.schema.Employee.Builder clearDesignation() {
+    public com.nipun.schema.Employee.Builder clearDesignation() {
       designation = null;
       fieldSetFlags()[4] = false;
       return this;

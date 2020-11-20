@@ -1,7 +1,7 @@
 {
 	"type": "record",
 	"name": "EmployeeKey",
-	"namespace": "com.baeldung.schema",
+	"namespace": "com.nipun.schema",
 	"fields": [
 	 {
 		"name": "id",

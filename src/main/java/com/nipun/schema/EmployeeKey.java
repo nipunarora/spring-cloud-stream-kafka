@@ -3,9 +3,8 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.baeldung.schema;
+package com.nipun.schema;
 
-import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -15,7 +14,7 @@ import org.apache.avro.message.SchemaStore;
 @org.apache.avro.specific.AvroGenerated
 public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
   private static final long serialVersionUID = 5288483459411046896L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"EmployeeKey\",\"namespace\":\"com.baeldung.schema\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"departmentName\",\"type\":\"string\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"EmployeeKey\",\"namespace\":\"com.nipun.schema\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"departmentName\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -150,8 +149,8 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase imp
    * Creates a new EmployeeKey RecordBuilder.
    * @return A new EmployeeKey RecordBuilder
    */
-  public static com.baeldung.schema.EmployeeKey.Builder newBuilder() {
-    return new com.baeldung.schema.EmployeeKey.Builder();
+  public static com.nipun.schema.EmployeeKey.Builder newBuilder() {
+    return new com.nipun.schema.EmployeeKey.Builder();
   }
 
   /**
@@ -159,11 +158,11 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing builder to copy.
    * @return A new EmployeeKey RecordBuilder
    */
-  public static com.baeldung.schema.EmployeeKey.Builder newBuilder(com.baeldung.schema.EmployeeKey.Builder other) {
+  public static com.nipun.schema.EmployeeKey.Builder newBuilder(com.nipun.schema.EmployeeKey.Builder other) {
     if (other == null) {
-      return new com.baeldung.schema.EmployeeKey.Builder();
+      return new com.nipun.schema.EmployeeKey.Builder();
     } else {
-      return new com.baeldung.schema.EmployeeKey.Builder(other);
+      return new com.nipun.schema.EmployeeKey.Builder(other);
     }
   }
 
@@ -172,11 +171,11 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing instance to copy.
    * @return A new EmployeeKey RecordBuilder
    */
-  public static com.baeldung.schema.EmployeeKey.Builder newBuilder(com.baeldung.schema.EmployeeKey other) {
+  public static com.nipun.schema.EmployeeKey.Builder newBuilder(com.nipun.schema.EmployeeKey other) {
     if (other == null) {
-      return new com.baeldung.schema.EmployeeKey.Builder();
+      return new com.nipun.schema.EmployeeKey.Builder();
     } else {
-      return new com.baeldung.schema.EmployeeKey.Builder(other);
+      return new com.nipun.schema.EmployeeKey.Builder(other);
     }
   }
 
@@ -199,7 +198,7 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.baeldung.schema.EmployeeKey.Builder other) {
+    private Builder(com.nipun.schema.EmployeeKey.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -215,7 +214,7 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing EmployeeKey instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.baeldung.schema.EmployeeKey other) {
+    private Builder(com.nipun.schema.EmployeeKey other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -241,7 +240,7 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.baeldung.schema.EmployeeKey.Builder setId(int value) {
+    public com.nipun.schema.EmployeeKey.Builder setId(int value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -261,7 +260,7 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public com.baeldung.schema.EmployeeKey.Builder clearId() {
+    public com.nipun.schema.EmployeeKey.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -280,7 +279,7 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'departmentName'.
       * @return This builder.
       */
-    public com.baeldung.schema.EmployeeKey.Builder setDepartmentName(java.lang.CharSequence value) {
+    public com.nipun.schema.EmployeeKey.Builder setDepartmentName(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.departmentName = value;
       fieldSetFlags()[1] = true;
@@ -300,7 +299,7 @@ public class EmployeeKey extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'departmentName' field.
       * @return This builder.
       */
-    public com.baeldung.schema.EmployeeKey.Builder clearDepartmentName() {
+    public com.nipun.schema.EmployeeKey.Builder clearDepartmentName() {
       departmentName = null;
       fieldSetFlags()[1] = false;
       return this;
